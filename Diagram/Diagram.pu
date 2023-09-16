@@ -1,0 +1,28 @@
+@startuml
+Components.BComponent -|> main.Component
+Components.AComponent -|> main.Component
+namespace main{
+    class CallFactory{
+        Componenent* GenerateComponent(string component_name);
+    }
+    class Component {
+        + void Start()
+    }
+}
+main ..>Factory
+namespace Factory{
+    class Factory{
+        Component* GenerateComponent(string component_name)
+    }
+}
+Factory ..> Components
+namespace Components{
+    
+    class AComponent{
+        void Start()
+    }
+    class BComponent{
+        void Start()
+    }
+}
+@enduml
