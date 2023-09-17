@@ -1,7 +1,7 @@
 #include "./Factory.h"
-#include "./../Component.h"
-#include "./Component/AComponent.h"
-#include "./Component/BComponent.h"
+#include "./../Engine/Component.h"
+#include "../UserFolder/Component/AComponent.h"
+#include "../UserFolder/Component/BComponent.h"
 Component *GenerateComponent(std::string component_name)
 {
     Component *returnvalue;

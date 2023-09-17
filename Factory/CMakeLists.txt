@@ -5,8 +5,10 @@ cmake_minimum_required(VERSION 3.1)
 project(FactoryDLL CXX)
 
 # srcフォルダー以下のcppファイル一覧をcppfilesという変数に格納
-file(GLOB_RECURSE cppfiles RELATIVE ${PROJECT_SOURCE_DIR} ./*.cpp ./Component/*.cpp)
+file(GLOB_RECURSE cppfiles RELATIVE ${PROJECT_SOURCE_DIR} ./*.cpp ./../UserFolder/*.cpp)
 message(${cppfiles})
+
+# add_subdirectory(./../UserFolder)
 
 # dllでビルドすると指定
 add_library(FactoryDLL SHARED ${cppfiles})

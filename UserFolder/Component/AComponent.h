@@ -1,5 +1,5 @@
 #pragma once
-#include "./../../Component.h"
+#include "./../../Engine/Component.h"
 
 class __declspec(dllexport) AComponent : public Component
 {

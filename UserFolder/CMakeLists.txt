@@ -6,6 +6,7 @@ project(CustomComponentDLL CXX)
 
 # srcフォルダー以下のcppファイル一覧をcppfilesという変数に格納
 file(GLOB_RECURSE cppfiles RELATIVE ${PROJECT_SOURCE_DIR} ./*.cpp)
+message(${cppfiles})
 
 # dllでビルドすると指定
 add_library(CustomComponentDLL SHARED ${cppfiles})
